@@ -75,6 +75,11 @@
 </template>
 
 <script>
+  /**
+   * @vue-data {String} ecosystem - Links for the vuetify ecosystem
+   * @vue-data {String} importantLinks - Important links
+   * @vue-data {String} whatsNext - New vuetify features
+   */
 export default {
     data: () => ({
         ecosystem: [

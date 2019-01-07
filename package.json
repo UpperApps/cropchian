@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit --watch"
+    "test:unit": "vue-cli-service test:unit --watch",
+    "doc": "jsdoc -c jsdoc-config.js"
   },
   "dependencies": {
     "@mdi/font": "^2.6.95",
@@ -30,8 +31,10 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "jsdoc-vuejs": "^2.3.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "tui-jsdoc-template": "^1.2.2",
     "vue-cli-plugin-vuetify": "^0.4.6",
     "vue-template-compiler": "^2.5.21",
     "vuetify-loader": "^1.0.5"
