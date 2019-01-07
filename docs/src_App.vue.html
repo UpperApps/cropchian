@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Module: Store | Vue Seed Project Doc</title>
+    <title>Source: src/App.vue | Vue Seed Project Doc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -43,124 +45,48 @@
 
 
 
-
-<section>
-
-<header>
     
-        <h2>Store</h2>
-        
-            
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>&lt;template>
+    &lt;v-app>
+        &lt;v-toolbar app>
+            &lt;v-toolbar-title class="headline text-uppercase">
+                &lt;span>Vuetify&lt;/span>
+                &lt;span class="font-weight-light">MATERIAL DESIGN&lt;/span>
+            &lt;/v-toolbar-title>
+            &lt;v-spacer>&lt;/v-spacer>
+            &lt;v-btn
+                flat
+                href="https://github.com/vuetifyjs/vuetify/releases/latest"
+                target="_blank"
+            >
+                &lt;span class="mr-2">Latest Release&lt;/span>
+                &lt;v-icon>mdi-open-in-new&lt;/v-icon>
+            &lt;/v-btn>
+        &lt;/v-toolbar>
 
-<article>
-    
-        <div class="container-overview">
-        
-            
-                <div class="description"><p>Contains the application store using the vue official implementation - Vuex.</p></div>
-            
+        &lt;v-content> &lt;router-view /> &lt;/v-content>
+    &lt;/v-app>
+&lt;/template>
 
-            
-                
-
-<dt>
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+&lt;script>
+/**
+ * @component App
+ * @desc This is the main app component.
+ */
+export default {
+    name: 'App',
+    data() {
+        return {
+            //
+        };
+    }
+};
+&lt;/script>
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -177,7 +103,7 @@
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'module:Store_sub'.replace(/"/g, '_');
+        var id = '_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

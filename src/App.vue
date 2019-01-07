@@ -21,6 +21,10 @@
 </template>
 
 <script>
+/**
+ * @component App
+ * @desc This is the main app component.
+ */
 export default {
     name: 'App',
     data() {

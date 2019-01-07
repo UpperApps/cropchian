@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Module: Store | Vue Seed Project Doc</title>
+    <title>Source: src/registerServiceWorker.js | Vue Seed Project Doc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -43,124 +45,53 @@
 
 
 
-
-<section>
-
-<header>
     
-        <h2>Store</h2>
-        
-            
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-console */
 
-<article>
-    
-        <div class="container-overview">
-        
-            
-                <div class="description"><p>Contains the application store using the vue official implementation - Vuex.</p></div>
-            
+import { register } from 'register-service-worker';
 
-            
-                
-
-<dt>
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+if (process.env.NODE_ENV === 'production') {
+    /**
+     * @author Rodrigo Melo
+     * @function register
+     * @desc Registers the service worker configurations.
+     * @param {String} url Service worker file location
+     * @param {Object} object Object with service worker hooks
+     */
+    register(`${process.env.BASE_URL}service-worker.js`, {
+        ready() {
+            console.log(
+                'App is being served from cache by a service worker.\n' +
+                    'For more details, visit https://goo.gl/AFskqB'
+            );
+        },
+        registered() {
+            console.log('Service worker has been registered.');
+        },
+        cached() {
+            console.log('Content has been cached for offline use.');
+        },
+        updatefound() {
+            console.log('New content is downloading.');
+        },
+        updated() {
+            console.log('New content is available; please refresh.');
+        },
+        offline() {
+            console.log(
+                'No internet connection found. App is running in offline mode.'
+            );
+        },
+        error(error) {
+            console.error('Error during service worker registration:', error);
+        }
+    });
+}
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -177,7 +108,7 @@
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'module:Store_sub'.replace(/"/g, '_');
+        var id = '_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

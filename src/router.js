@@ -4,6 +4,10 @@ import Home from './views/Home.vue';
 
 Vue.use(Router);
 
+/**
+ * @module Router
+ * @desc Contains the application rounting using Vue Route.
+ */
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,

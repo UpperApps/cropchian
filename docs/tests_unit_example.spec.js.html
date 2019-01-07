@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Module: Store | Vue Seed Project Doc</title>
+    <title>Source: tests/unit/example.spec.js | Vue Seed Project Doc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -43,124 +45,36 @@
 
 
 
-
-<section>
-
-<header>
     
-        <h2>Store</h2>
-        
-            
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { shallowMount } from '@vue/test-utils';
+import HelloWorld from '@/components/HelloWorld.vue';
 
-<article>
-    
-        <div class="container-overview">
-        
-            
-                <div class="description"><p>Contains the application store using the vue official implementation - Vuex.</p></div>
-            
+/**
+ * @module TestExemple
+ * @desc Contains the main Vue configuration.
+ * @author Rodrigo Melo
+ */
 
-            
-                
-
-<dt>
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+/**
+ * @function describe
+ * @desc Describes a group of test functions.
+ * @param {String} description Description of the block test.
+ * @param {Function} anonimous Anonimous function containing the tests.
+ */
+describe('HelloWorld.vue', () => {
+    it('renders props.msg when passed', () => {
+        const msg = 'new message';
+        const wrapper = shallowMount(HelloWorld, {
+            propsData: { msg }
+        });
+        expect(wrapper.text()).toMatch(msg);
+    });
+});
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -177,7 +91,7 @@
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'module:Store_sub'.replace(/"/g, '_');
+        var id = '_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

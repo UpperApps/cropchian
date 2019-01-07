@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Module: Store | Vue Seed Project Doc</title>
+    <title>Source: src/router.js | Vue Seed Project Doc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -43,124 +45,42 @@
 
 
 
-
-<section>
-
-<header>
     
-        <h2>Store</h2>
-        
-            
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
 
-<article>
-    
-        <div class="container-overview">
-        
-            
-                <div class="description"><p>Contains the application store using the vue official implementation - Vuex.</p></div>
-            
+Vue.use(Router);
 
-            
-                
-
-<dt>
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-</dd>
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+/**
+ * @module Router
+ * @desc Contains the application rounting using Vue Route.
+ */
+export default new Router({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/about',
+            name: 'about',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: () =>
+                import(/* webpackChunkName: "about" */ './views/About.vue')
+        }
+    ]
+});
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -177,7 +97,7 @@
 <script src="scripts/linenumber.js"></script>
 
     <script>
-        var id = 'module:Store_sub'.replace(/"/g, '_');
+        var id = '_sub'.replace(/"/g, '_');
         var selectedApi = document.getElementById(id); // do not use jquery selector
         var $selectedApi = $(selectedApi);
 

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Source: main.js | Vue-Vuetify Seed Project Documentation</title>
+    <title>Source: src/store.js | Vue Seed Project Doc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -28,7 +28,7 @@
         
     </div>
     <div class="title">
-        <h1><a href="index.html" class="link">Vue-Vuetify Seed Project Documentation</a></h1>
+        <h1><a href="index.html" class="link">Vue Seed Project Doc</a></h1>
         
     </div>
     <div class="search-container" id="search-container">
@@ -36,7 +36,7 @@
         <ul></ul>
     </div>
     
-    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-HelloWorld.html">HelloWorld</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:HelloWorld_sub"></div></li><li><a href="module-main.html">main</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:main_sub"></div></li><li><a href="module-store.html">store</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:store_sub"></div></li></ul></div>
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-App.html">App</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:App_sub"></div></li><li><a href="module-HelloWorld.html">HelloWorld</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:HelloWorld_sub"></div></li><li><a href="module-Main.html">Main</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:Main_sub"></div></li><li><a href="module-Router.html">Router</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:Router_sub"></div></li><li><a href="module-Store.html">Store</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:Store_sub"></div></li><li><a href="module-TestExemple.html">TestExemple</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:TestExemple_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-TestExemple.html#~describe">describe</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#register">register</a></li></ul></div>
 </nav>
 <div id="resizer"></div>
 
@@ -49,35 +49,19 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import Vue from 'vue';
-import './plugins/vuetify';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import './registerServiceWorker';
-import 'roboto-fontface/css/roboto/roboto-fontface.css';
-import '@mdi/font/css/materialdesignicons.css';
+import Vuex from 'vuex';
 
-Vue.config.productionTip = false;
-/**
- * @module main
- * @desc Contains utility functions for triangles.
- */
+Vue.use(Vuex);
 
 /**
- * Returns the area of a triangle calculated using Heron's formula.
- *
- * @param {number} a - length of one of the sides of the triangle
- * @param {number} b - length of another side of the triangle
- * @param {number} c - length of the last side of the triangle
- * @returns {number} - the area
- * @throws Will throw an error if any of the side-lengths is negative
- * @see https://www.mathsisfun.com/geometry/herons-formula.html
+ * @module Store
+ * @desc Contains the application store using the vue official implementation - Vuex.
  */
-new Vue({
-    router,
-    store,
-    render: h => h(App)
-}).$mount('#app');
+export default new Vuex.Store({
+    state: {},
+    mutations: {},
+    actions: {}
+});
 </code></pre>
         </article>
     </section>

@@ -9,20 +9,10 @@ import '@mdi/font/css/materialdesignicons.css';
 
 Vue.config.productionTip = false;
 /**
- * @module main
- * @desc Contains utility functions for triangles.
+ * @module Main
+ * @desc Contains the main Vue configuration.
  */
 
-/**
- * Returns the area of a triangle calculated using Heron's formula.
- *
- * @param {number} a - length of one of the sides of the triangle
- * @param {number} b - length of another side of the triangle
- * @param {number} c - length of the last side of the triangle
- * @returns {number} - the area
- * @throws Will throw an error if any of the side-lengths is negative
- * @see https://www.mathsisfun.com/geometry/herons-formula.html
- */
 new Vue({
     router,
     store,

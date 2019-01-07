@@ -3,6 +3,13 @@
 import { register } from 'register-service-worker';
 
 if (process.env.NODE_ENV === 'production') {
+    /**
+     * @author Rodrigo Melo
+     * @function register
+     * @desc Registers the service worker configurations.
+     * @param {String} url Service worker file location
+     * @param {Object} object Object with service worker hooks
+     */
     register(`${process.env.BASE_URL}service-worker.js`, {
         ready() {
             console.log(

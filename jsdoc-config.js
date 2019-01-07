@@ -22,7 +22,7 @@ module.exports = {
         dictionaries: ['jsdoc']
     },
     templates: {
-        name: 'Vue-Vuetify Seed Project Documentation',
+        name: 'Sample JSDoc Doc',
         logo: {
             url:
                 'C:/Repositories/UpperApps/vue-vuetify-seed-project/public/img/icons/favicon-32x32.png',
