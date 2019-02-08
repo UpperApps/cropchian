@@ -25,11 +25,10 @@ module.exports = {
         name: 'Sample JSDoc Doc',
         logo: {
             url:
-                'C:/Repositories/UpperApps/vue-vuetify-seed-project/public/img/icons/favicon-32x32.png',
+                'C:/Repositories/UpperApps/cropchien/public/img/icons/favicon-32x32.png',
             width: '32px',
             height: '32px',
-            link:
-                'C:/Repositories/UpperApps/vue-vuetify-seed-project/docs/index.html'
+            link: 'C:/Repositories/UpperApps/cropchien/docs/index.html'
         },
         footerText: 'Code rocks!',
         useCollapsibles: true,
