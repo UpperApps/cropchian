@@ -1,8 +1,10 @@
-# cropchien
+# Cropchien
 
 ## Project Information
 
-This porject has the purpose of been a seed configured project with the following frameorks/tools/libraries:
+This project is part o a study of PWA with Vuejs. It is a simple app to post dog`s photos, allowing to take photos with the  device camera and it will be able to send push notification using the firestore API.
+
+Follow the project configuration:
 
 * Vuejs 2.5 as SPA framework (created with Vue-CLI).
 * Vuex as a state management library (store) based on Flux pattern

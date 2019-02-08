@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
 
 Vue.use(Router);
 
@@ -15,7 +14,21 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: Home
+            component: () =>
+                import(/* webpackChunkName: "home" */ './views/Home.vue')
+        },
+        {
+            path: '/details/:id',
+            name: 'details',
+            props: true,
+            component: () =>
+                import(/* webpackChunkName: "details" */ './views/Detail.vue')
+        },
+        {
+            path: '/post',
+            name: 'post',
+            component: () =>
+                import(/* webpackChunkName: "post" */ './views/Post.vue')
         }
     ]
 });

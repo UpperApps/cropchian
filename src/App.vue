@@ -1,18 +1,14 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-btn icon v-if="$route.name != 'home'" @click="$router.go(-1)"/>
-      <v-icon>arrow-back</v-icon>
-      <v-toolbar-title>
-        <span>cropchien</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-    </v-toolbar>
+    <v-app>
+        <v-toolbar app>
+            <v-btn icon v-if="$route.name != 'home'" @click="$router.go(-1)" />
+            <v-icon>arrow-back</v-icon>
+            <v-toolbar-title> <span>cropchien</span> </v-toolbar-title>
+            <v-spacer></v-spacer>
+        </v-toolbar>
 
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+        <v-content> <router-view /> </v-content>
+    </v-app>
 </template>
 
 <script>
