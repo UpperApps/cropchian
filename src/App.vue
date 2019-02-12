@@ -16,13 +16,9 @@
  * @component App
  * @desc This is the main app component.
  */
-import Home from './views/Home';
 
 export default {
     name: 'App',
-    components: {
-        Home
-    },
     data() {
         return {
             //

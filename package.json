@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@mdi/font": "^2.6.95",
+    "axios": "^0.18.0",
+    "firebase": "^5.8.2",
     "register-service-worker": "^1.5.2",
     "roboto-fontface": "*",
     "vue": "^2.5.21",
