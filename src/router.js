@@ -5,7 +5,7 @@ Vue.use(Router);
 
 /**
  * @module Router
- * @desc Contains the application rounting using Vue Route.
+ * @desc Contains the application routing using Vue Route.
  */
 export default new Router({
     mode: 'history',
@@ -27,8 +27,15 @@ export default new Router({
         {
             path: '/post',
             name: 'post',
+            props: true,
             component: () =>
                 import(/* webpackChunkName: "post" */ './views/Post.vue')
+        },
+        {
+            path: '/camera',
+            name: 'camera',
+            component: () =>
+                import(/* webpackChunkName: "post" */ './views/Camera.vue')
         }
     ]
 });

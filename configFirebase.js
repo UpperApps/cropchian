@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/messaging';
+import 'firebase/storage';
 
 var config = {
     apiKey: 'AIzaSyDNvhkQuaa3hCqK68MbVLcyjotpM1p5W2U',
@@ -19,6 +20,9 @@ let db = firebase.firestore();
 // It enables Firestorm to create an IndexedDB (See: https://developers.google.com/web/ilt/pwa/working-with-indexeddb).
 db.enablePersistence({ experimentalTabSynchronization: true });
 
+const storage = firebase.storage();
+
 export default {
-    db
+    db,
+    storage
 };

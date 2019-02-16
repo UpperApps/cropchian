@@ -1,14 +1,13 @@
 <template>
     <v-container grid-list-xs>
         <v-layout>
-            <v-flex> <v-img :src="dog.url"></v-img> </v-flex>
             <v-flex>
+                <v-btn @click="$router.go(-1)" color="primary">
+                    <v-icon>mdi-arrow-left</v-icon>Home
+                </v-btn>
+                <v-img :src="dog.url" aspect-ratio="1.7"></v-img>
                 <h1>{{ dog.comment }}</h1>
                 <p class="subtitle">{{ dog.info }}</p>
-                <v-btn @click="$router.go(-1)" color="primary">
-                    <v-icon>mdi-arrow-left</v-icon>
-                    Back
-                </v-btn>
             </v-flex>
         </v-layout>
     </v-container>

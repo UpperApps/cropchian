@@ -2,6 +2,10 @@
     <v-container grid-list-xs>
         <v-layout>
             <v-flex>
+                <v-btn @click="$router.go(-1)" color="primary">
+                    <v-icon>mdi-arrow-left</v-icon>Home
+                </v-btn>
+
                 <div id="spinner_container">
                     <v-progress-circular
                         v-if="loading"
@@ -30,6 +34,7 @@
                                 id="author"
                                 hint="Your name"
                             ></v-text-field>
+
                             <v-btn block color="primary" @click="post()"
                                 >POST A DOG</v-btn
                             >
@@ -54,17 +59,28 @@ export default {
             loading: true
         };
     },
+    props: {
+        pictureUrl: {
+            default: '',
+            type: String
+        }
+    },
     mounted() {
-        axios
-            .get('https://dog.ceo/api/breed/appenzeller/images/random')
-            .then(response => {
-                if (response.data.status) {
-                    this.dogUrl = response.data.message;
-                    this.loading = false;
-                } else {
-                    console.log('Error getting image');
-                }
-            });
+        if (this.pictureUrl !== '') {
+            this.dogUrl = this.pictureUrl;
+            this.loading = false;
+        } else {
+            axios
+                .get('https://dog.ceo/api/breed/appenzeller/images/random')
+                .then(response => {
+                    if (response.data.status) {
+                        this.dogUrl = response.data.message;
+                        this.loading = false;
+                    } else {
+                        console.log('Error getting image');
+                    }
+                });
+        }
     },
     methods: {
         post() {

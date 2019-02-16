@@ -57,7 +57,7 @@ export default {
     mounted() {
         firebase.db
             .collection('dogs')
-            .orderBy('created_at')
+            .orderBy('created_at', 'desc')
             .onSnapshot(snapshot => {
                 this.dogs = [];
                 snapshot.forEach(dog => {
