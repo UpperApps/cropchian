@@ -16,6 +16,9 @@ firebase.initializeApp(config);
 // Initialize Cloud Firestore through Firebase
 let db = firebase.firestore();
 
+// It enables Firestorm to create an IndexedDB (See: https://developers.google.com/web/ilt/pwa/working-with-indexeddb).
+db.enablePersistence({ experimentalTabSynchronization: true });
+
 export default {
     db
 };

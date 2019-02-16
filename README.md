@@ -2,7 +2,9 @@
 
 ## Project Information
 
-This project is part o a study of PWA with Vuejs. It is a simple app to post dog`s photos, allowing to take photos with the  device camera and it will be able to send push notification using the firestore API.
+This project is part o a study of PWA with Vuejs. It is a simple app to post dog`s photos, allowing to take photos with the  device camera and it will be able to send push notification using the firestore API. It was built based on the following tutorial: https://medium.com/@eder.ramirez87/modern-pwa-with-vue-cli-3-vuetify-firestore-workbox-part-1-974383be5540
+
+**Thanks Eder Ramírez Hernández!**
 
 Follow the project configuration:
 
